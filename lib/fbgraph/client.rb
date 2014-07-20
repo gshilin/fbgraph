@@ -68,10 +68,3 @@ module FBGraph
   end
 end
 
-# :nodoc: undo the clusterfuck that rest-client has done
-module Net
-  class HTTP
-    undef request
-    alias request __request__
-  end
-end
